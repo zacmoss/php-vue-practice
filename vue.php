@@ -72,8 +72,19 @@
                     <li><strong>Task: </strong><?= $task['Title']?></li>
                     <li><strong>Due: </strong><?= $task['due']?></li>
                     <li><strong>Responsible for: </strong><?= $task['assigned_to']?></li>
-                    <li><strong><?= $task['completed'] ? 'Completed' : 'Incomplete' ?></strong></li>
+                    <li><strong>Status: </strong><?= $task['completed'] ? '&#9989' : 'Incomplete' ?></li>
                 </ul>
+
+                <?php if ($task['completed']) : ?>
+
+                    <p>Completed</p>
+
+                <? else : ?>
+
+                    <p>Incomplete</p>
+
+                <? endif ?>
+                
             </div>
 
 

@@ -1,5 +1,7 @@
 <?php
 
+require 'functions.php';
+
 $names = ['Zac', 'Steven', 'Tristan'];
 
 foreach ($names as $name) {
@@ -23,7 +25,7 @@ $jobs['Dave'] = 'Policeman';
 var_dump($jobs);
 
 
-$task = ['Title' => 'Complete To Do List', 'due' => 'today', 'assigned_to' => 'Zac', 'completed' => false];
+$task = ['Title' => 'Complete To Do List', 'due' => 'today', 'assigned_to' => 'Zac', 'completed' => true];
 
 /*
 if ($task['completed'] == false) {
@@ -32,6 +34,29 @@ if ($task['completed'] == false) {
     echo 'is true';
 }
 */
+
+
+// CLASSES
+
+// public deals with encapsulation
+
+class Task {
+
+    protected $description;
+
+    protected $completed = false;
+
+    public function __construct($description)
+    {
+        $this->description = $description;
+    }
+}
+
+$task2 = new Task('Go to the store');
+
+
+
+
 
 require 'vue.php';
 
