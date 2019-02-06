@@ -65,6 +65,17 @@
                 </ul>
             </div>
 
+            <div>
+                <h2>PHP Yo</h2>
+
+                <ul>
+                    <li><strong>Task: </strong><?= $task['Title']?></li>
+                    <li><strong>Due: </strong><?= $task['due']?></li>
+                    <li><strong>Responsible for: </strong><?= $task['assigned_to']?></li>
+                    <li><strong><?= $task['completed'] ? 'Completed' : 'Incomplete' ?></strong></li>
+                </ul>
+            </div>
+
 
         </div>
 
